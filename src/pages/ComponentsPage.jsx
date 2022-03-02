@@ -4,6 +4,7 @@ import GetStarted from "components/landingPage/GetStarted";
 import Header from "components/landingPage/Header";
 import ProductCard from "components/shop/ProductCard";
 import ProductCard2 from "components/shop/ProductCard2";
+import AdminStudio from "pages/adminEcommerce/AdminStudio";
 import ScreenItem from "components/landingPage/ScreenItem";
 import { Title } from "components/landingPage/Screens";
 import { H2, H4, Span } from "components/Typography";

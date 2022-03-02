@@ -61,7 +61,7 @@ export const AuthProvider = ({ children }) => {
                 auth.currentUser.getIdToken().then((idToken) => {
                     console.log(idToken);
                     const FBIdToken = `Bearer ${idToken}`;
-                    localStorage.setItem("FBIdToken", FBIdToken);
+                    //localStorage.setItem("FBIdToken", FBIdToken);
                     dispatch({ type: SET_AUTHENTICATED });
                     axios.defaults.headers.common["Authorization"] = FBIdToken;
                     store.dispatch(getUserData());

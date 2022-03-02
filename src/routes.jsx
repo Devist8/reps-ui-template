@@ -13,6 +13,9 @@ const Loadable = (Component) => (props) =>
     ); // Landing page
 
 const LandingPage = Loadable(lazy(() => import("./pages/LandingPage")));
+const AdminStudio = Loadable(
+    lazy(() => import("./pages/adminEcommerce/AdminStudio"))
+);
 const LoadingPage = Loadable(lazy(() => import("./pages/Loading")));
 const ComponentsPage = Loadable(lazy(() => import("./pages/ComponentsPage")));
 const PricingPage = Loadable(lazy(() => import("./pages/Pricing")));
@@ -177,6 +180,10 @@ const routes = [
             {
                 path: "calendar",
                 element: <Calendar />,
+            },
+            {
+                path: "studio",
+                element: <AdminStudio />,
             },
             {
                 path: "todo-list",

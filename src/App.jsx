@@ -9,6 +9,10 @@ import routes from "./routes";
 import axios from "axios";
 import { ukoTheme } from "./theme";
 
+//Redux
+import { Provider } from "react-redux";
+import store from "./redux/store";
+
 axios.defaults.baseURL = "http://localhost:5001/reps-699b0/us-east1/api";
 
 const App = () => {
@@ -28,15 +32,17 @@ const App = () => {
         },
     };
     return (
-        <StyledEngineProvider injectFirst>
-            <ThemeProvider theme={appTheme}>
-                <RTL direction={appTheme.direction}>
-                    <CssBaseline />
-                    <Toaster toastOptions={toasterOptions} />
-                    {allPages}
-                </RTL>
-            </ThemeProvider>
-        </StyledEngineProvider>
+        <Provider store={store}>
+            <StyledEngineProvider injectFirst>
+                <ThemeProvider theme={appTheme}>
+                    <RTL direction={appTheme.direction}>
+                        <CssBaseline />
+                        <Toaster toastOptions={toasterOptions} />
+                        {allPages}
+                    </RTL>
+                </ThemeProvider>
+            </StyledEngineProvider>
+        </Provider>
     );
 };
 

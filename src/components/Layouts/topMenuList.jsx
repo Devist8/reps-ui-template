@@ -42,6 +42,7 @@ const index = [
     {
         title: "Studio",
         Icon: FitnessCenterOutlinedIcon,
+        path: "/dashboard/studio",
     },
     {
         title: "Data Table",
